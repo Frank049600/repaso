@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    opacity: 1;
+    z-index: 9;
+    animation: fade-out 2s forwards 1;
+    pointer-events: none;
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+.left-side{
+    width: 15vw;
+    height: 100%;
+    border-right: 1px solid rgb(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2vw;
+    position: absolute;
+    top: 4vw;
+    left: -1.5vw;
+    transform: rotate(-90deg);
+    user-select: none;
+}
+
+.sm-product{
+    width: 100%;
+    height: auto;
+}
+
+.product-index{
+    font-size: 2vw;
+    text-align: center;
+}
+
+.sm-product-img-container{
+    position: relative;
+    margin: .5vw 0;
+    height: 15vw;
+    overflow: hidden;
+}
+
+.sm-product-img{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.sm-product-des{
+    text-align: right;
+    padding: 0 .5vw;
+    line-height: 1.5vw;
+    font-size: 1vw;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.social-link{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-link-img{
+    width: 1.6vw;
+    height: 1.6vw;
+    margin: 0.5vw;
+    cursor: pointer;
+}
