@@ -30,7 +30,7 @@ let smProductDes = document.querySelector('.sm-product-des')
 let productImgContainer = document.querySelector('.product-img-container')
 let productImg = document.querySelector('.backdrop-img')
 let backdropImg = document.querySelector('.backdrop-img')
-let productDetail = document.querySelector('.product-detail')
+let productDetail = document.querySelector('.detail-product')
 let productName = document.querySelector('.product-name')
 let productDes = document.querySelector('.product-des')
 //console.log('Boton', nextBtn)
@@ -50,4 +50,19 @@ nextBtn.addEventListener('click', () => {
     productImgContainer.classList.add('slide')
     backdropImg.classList.add('fade')
     productDetail.classList.add('fade')
+
+    setTimeout(() => {
+        //Se esperan 500ms y despues se ejecuta este código
+        productName.innerHTML = productData[currentProduct].name
+        productDes.innerHTML = productData[currentProduct].des
+        smImg.src = productImg.src = backdropImg.src = `img/${productData[currentProduct].image}`
+    }, 500)
+
+    setTimeout(() => {
+        //Se esperan 500ms y despues se ejecuta este código
+        smImgContainer.classList.remove('slide')
+        productImgContainer.classList.remove('slide')
+        backdropImg.classList.remove('fade')
+        productDetail.classList.remove('fade')
+    }, 1000)
 })
